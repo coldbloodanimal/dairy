@@ -21,4 +21,6 @@ https://www.markdownguide.org/basic-syntax/
 我喜欢的姑娘
 
 1. 美丽  
+  1. 短头发
+  2. 美丽的眼睛
 3. 聪明
