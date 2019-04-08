@@ -22,5 +22,7 @@ https://www.markdownguide.org/basic-syntax/
 
 1. 美丽  
     1. 短头发
+        1.美丽的短头发
+        2.漂亮的短头发
     2. 美丽的眼睛
 3. 聪明
