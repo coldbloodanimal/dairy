@@ -20,5 +20,5 @@ https://www.markdownguide.org/basic-syntax/
 有序的列表，大概是类似这种"1.aaa","2.bbb"
 我喜欢的姑娘
 
-1.女的  
-2.有钱
+1. 美丽  
+3. 聪明
