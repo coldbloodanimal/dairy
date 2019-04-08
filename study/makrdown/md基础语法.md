@@ -28,3 +28,13 @@ https://www.markdownguide.org/basic-syntax/
         3. 美丽的头发
     2. 美丽的眼睛
 3. 聪明
+
+无序列表
+* 语文
++ 数学
+- 英语
+
+代码块一般使用四个空格或一个tab，但是如果在list中的话，空格或者tab加倍
+    public void main(){
+        System.out.println("hello world");
+    }
