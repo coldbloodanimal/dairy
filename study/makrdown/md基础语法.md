@@ -34,7 +34,9 @@ https://www.markdownguide.org/basic-syntax/
 + 数学
 - 英语
 
-代码块一般使用四个空格或一个tab，但是如果在list中的话，空格或者tab加倍
+代码块一般使用四个空格或一个tab，但是如果在list中的话，空格或者tab加倍，并且前后要有空格行
     public void main(){
         System.out.println("hello world");
     }
+
+
