@@ -1,2 +1,2 @@
 
-![a test](https://github.com/coldbloodanimal/maven-multi-modules/blob/master/README.md)
+[a test](https://github.com/coldbloodanimal/maven-multi-modules/blob/master/README.md)
