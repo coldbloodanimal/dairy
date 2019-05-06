@@ -26,4 +26,5 @@ RabbitMQ，发送消息使用的一些行业术语。
     RabbitMQ支持多种协议。这个教程使用AMQP 0-9-1，开源,多用途的消息协议。有大量支持RabbitMQ的客户端在不同的语言中。
 我们将使用springboot来引导和配置 spring amqp项目。我们选择maven来构建项目，当然也可以使用gradle。
 
-代码部分略
+代码部分略,
+但这个https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html
