@@ -23,5 +23,15 @@ Spring AMQP 默认会采取保守措施来消息确认(看样子是重新排队)
   defaultRequeueRejected=false
 (此处原文使用了or，我猜测此处是因果关系，上面设置了false，抛出了后面的异常)监听器抛出异常AmqpRejectAndDontRequeueException。这是典型的行为你想要从你的监听器获得的。再这种模式不用去担心忘记收到消息确认。处理完消息后，监听器会调用
   channel.basicAck()
-消息收到确认必须和消息接收的的通道在同一个通道。尝试使用不同的通道确认会导致通道级别异常。可以参考[确认指导](https://www.rabbitmq.com/confirms.html)去学习更多。Spring AMQP一般
+消息收到确认必须和消息接收的的通道在同一个通道。尝试使用不同的通道确认会导致通道级别异常。可以参考[确认指导](https://www.rabbitmq.com/confirms.html)去学习更多。Spring AMQP一般注意这点除非我们组合使用代码和客户端组合使用，这是一些需要上心的。
+
+忘记确认
+(// TODO)
+
+## 消息持久化
+消息持久化是默认的。
+
+## 公平调度 vs 循环调度
+默认的。RabbitMQ 会发送每一个消息给下一个消费者，依次。平均下来没有给消费者会获得同样数量的消息。
+
   
