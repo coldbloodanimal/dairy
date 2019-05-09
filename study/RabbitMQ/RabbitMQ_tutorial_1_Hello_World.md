@@ -28,3 +28,4 @@ RabbitMQ，发送消息使用的一些行业术语。
 
 代码部分略,
 但这个https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html
+主要是
