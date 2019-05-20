@@ -11,5 +11,5 @@ Topics
 * \*(星)可以替代确定的一个单词
 * \#(哈希)可以替代0个或多个单词
 这在例子中很好解释
-![topic]（https://www.rabbitmq.com/img/tutorials/python-five.png）
+![topic](https://www.rabbitmq.com/img/tutorials/python-five.png)
 稍后翻译
