@@ -11,5 +11,14 @@ Topics
 * \*(星)可以替代确定的一个单词
 * \#(哈希)可以替代0个或多个单词
 这在例子中很好解释
+
 ![topic](https://www.rabbitmq.com/img/tutorials/python-five.png)
-稍后翻译
+此例中，我们发送的消息都是描述动物的。这些消息北宋宋的时候携带的路由密匙又三个单词组成(两个.)。路由密匙中第一个单词描述速度，第二个是颜色，第三个是物种："<speed>.<colour>.<species>".
+我们创建三个绑定:Q1队列绑定关键字 "*.orange.*"和Q2的"*.*.rabbit"和"lazy.#".
+这些分类总结为：
+* Q1 队列对所有黄颜色的动物感兴趣。
+* Q2 想要监听所有关于兔子，和懒的动物。
+
+一个消息路由关键字被设置为"quick.orange.rabbit"将会被传递给两个队列。消息"lazy.orange.elephant"也会。另一方面"quick.orange.fox"只会去队列1, "lazy.brown.fox"只会去队列2. "lazy.pink.rabbit"指挥去第二队列一次,尽管匹配了两次. "quick.brown.fox"没有匹配任何一个，所以会被丢弃。
+如果我们破坏了协议发送了一个消息有四个单词会发生什么呢，比如"orage"或者"quick.orange.male.rabbit"?好吧，这些消息不匹配任何绑定然后会丢失。
+另一方面"lazy.orange.male.rabbit",尽管它有四个单词，会匹配最后一个绑定会被传递到队列2中去。
