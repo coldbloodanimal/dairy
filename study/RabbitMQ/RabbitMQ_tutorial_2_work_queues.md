@@ -16,7 +16,7 @@
 
 ## 消息收到确认(也就是ack)
 做一个任务可能需要几秒，你或许会好奇当一个消费者开始一个长任务且干到一般儿的时候死掉了会发生什么事情。
-[官方文档](https://www.rabbitmq.com/confirms.html）（// TODO 有兴趣了，瞅瞅）
+[官方文档](https://www.rabbitmq.com/confirms.html)（// TODO 有兴趣了，瞅瞅）
 Spring AMQP 默认会采取保守措施来消息确认(看样子是重新排队)。如果一个监听器抛出一个异常，容器(我猜测是RabbitMQ)调用
   channel.basicReject(deliveryTag, requeue)
 重新排队时默认设置，除非你明确设置：
