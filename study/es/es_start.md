@@ -15,12 +15,16 @@ beats 轻量级 摄取
 type据说已经不需要了，但测试的时候出问题了，id感觉也可以不要自动生成
 
 POST ice/_doc/2
+
 {
   "name":"xiaohong",
   "age":10
 }
 
+DELETE ice/_doc/2
+
 PUT ice/_doc/2
+
 {
   "name":"xiaohonghong",
   "age":10
@@ -28,5 +32,8 @@ PUT ice/_doc/2
 
 GET ice/_doc/2
 
-DELETE ice/_doc/2
+复杂查询
+
+
+
 
