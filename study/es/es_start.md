@@ -32,8 +32,100 @@ PUT ice/_doc/2
 
 GET ice/_doc/2
 
-复杂查询
+复杂查询 条件查询 查询名称为小红的
+GET ice/_search
 
+{
+  "query": {
+    "match": {
+      "name": "xiaohong"
+    }
+  }
+}
 
+复杂查询 与 bool是要最后里面的所有判断提交为真，查询name为小红，且年龄10岁的
+GET ice/_search
 
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": "xiaohong"
+          }
+        },
+        {
+          "match": {
+            "age": "10"
+          }
+        }
+      ]
+    }
+  }
+}
+
+复杂查询 非 must_not名字是小红，年龄不是10岁的
+GET ice/_search
+
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "name": "xiaohong"
+          }
+        }
+      ],"must_not": [
+        {"match": {
+          "age": "10"
+        }}
+      ]
+    }
+  }
+}
+
+复杂查询 或 should
+GET ice/_search
+
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "name": "xiaohong"
+          }
+        },{
+                    "match": {
+            "name": "xiaoming"
+          }
+        }
+      ]
+    }
+  }
+}
+
+聚合查询 _count 
+GET ice/_count
+
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "name": "xiaohong"
+          }
+        },
+        {
+          "match": {
+            "name": "xiaoming"
+          }
+        }
+      ]
+    }
+  }
+}
 
