@@ -14,7 +14,7 @@
         return kv;
     }
     
-以上
-
+超时可以使用spring.cache.redis.time-to-live=60000 
+thank you
 
 
