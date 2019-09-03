@@ -1,11 +1,21 @@
 #spring 缓存
 
-添加maven依赖
+添加maven依赖，缓存时基于redis的，所以也要又redis
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         
+添加注解,位置同SpringBootApplication
+
+        @EnableCaching
+        @SpringBootApplication
+
 #核心的三个注解
 1. @Cacheable 方法可缓存:查询缓存，如果没有缓存，则进入方法体内
 2. @CacheEvict 缓存被清除:推测场景：数据删除时候用
@@ -23,6 +33,12 @@
     }
     
 超时可以使用spring.cache.redis.time-to-live=60000 
-thank you
+以秒为单位
+
+弊端:
+* 超时设置的不灵活
+* redis中key 的格式为redis::key有点奇怪
+有空再详细看看
+如上thank you
 
 
