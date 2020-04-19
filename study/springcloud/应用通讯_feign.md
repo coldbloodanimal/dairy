@@ -14,10 +14,10 @@
 
 另外一些服务使用那些Feign客户端的时候，需要添加注解，如@EnableFeignClients，见下面代码
 
-  @SpringCloudApplication
-  @EnableFeignClients
-  public class Application {
-      public static void main(String[] args) {
-          SpringApplication.run(Application.class, args);
-      }
-  }
+          @SpringCloudApplication
+          @EnableFeignClients
+          public class Application {
+              public static void main(String[] args) {
+                  SpringApplication.run(Application.class, args);
+              }
+          }
