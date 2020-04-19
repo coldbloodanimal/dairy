@@ -3,3 +3,5 @@
 [volatile立即可见性猜想](https://github.com/coldbloodanimal/dairy/blob/master/study/java/volatile.md)
 
 [服务注册与服务发现](https://github.com/coldbloodanimal/dairy/blob/master/study/springcloud/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0.md)
+
+[微服务配置中心动态更新](https://github.com/coldbloodanimal/dairy/blob/master/study/springcloud/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83.md)
