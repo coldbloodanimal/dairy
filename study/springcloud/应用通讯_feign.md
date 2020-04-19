@@ -1,5 +1,6 @@
 ## feign
 订单服务"order"调用商品服务"product"，使用feign时，需要写一个product的客户端，类似于jdbc对于mysql，如下
+
         @FeignClient("product")
         public interface StoreClient {
             @RequestMapping(method = RequestMethod.GET, value = "/stores")
