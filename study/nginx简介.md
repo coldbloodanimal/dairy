@@ -64,8 +64,10 @@ web服务一个重要任务就是提供文件服务，图片，html页面
    	
    ```
 
-   每次更改配置文件后，记得重新加载配置文件
+   **nginx发布静态资源，最终的访问路径是root+location**
 
+   每次更改配置文件后，记得重新加载配置文件
+   
    ```
    nginx -s reload
    ```
@@ -148,7 +150,7 @@ web服务一个重要任务就是提供文件服务，图片，html页面
       		# 如果有多个location匹配一个请求，则选择前缀最长的
       		location /fptxl/ {
       			#每个请求都会加上root对应的地址，就是文件在服务器的真是地址
-      			proxy_pass http://localhost:8080/;
+      			proxy_pass http://localhost:18080/;
       		}
       ```
 
@@ -344,7 +346,7 @@ wss和https是可以共享443端口的。
 **root**：请求的根目录，一个完整的请求是root+uri，如果当前指令中没有root,则会使用上下文的root. 如下配置，请求/fptxl.html 的返回文件为/data/fptxl/fptxl.html。
 
 > ```
-> location /fptxl.html {
+> location / {
 >  root /data/fptxl;
 > }
 > ```
