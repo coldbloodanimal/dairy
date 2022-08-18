@@ -4,31 +4,31 @@
 
 我们的目的是在我们Layui框架的项目中，部分功能页面使用Vue开发。
 
-![](images\aim.png)
+![](./images/aim.png)
 
 # 当前场景
 
 我们的项目是前端使用Layui框架的前后端不分离的web项目。
 
-![](images\前后端不分离.jpg)
+![](./images/前后端不分离.jpg)
 
 前端Layui框架
 
-![](images\Layui框架.jpg)
+![](./images/Layui框架.jpg)
 
 # 我们的迁移策略
 
 1. 使用Vue框架开发Vue页面。
 
-   ![](images\vue_first.png)
+   ![](./images/vue_first.png)
 
 2. **每开发完成一个Vue页面，将它放置在原来的Layui框架中**(技术升级及成本等原因)。
 
-   ![](images\aim.png)
+   ![](./images/aim.png)
 
 3. 待到时机成熟时（Vue页面达到一定比率，或者公司决策），再统一使用Vue框架。
 
-![](images\vue_third.png)
+![](./images/vue_third.png)
 
 ## 我们遇到的问题
 
@@ -43,15 +43,15 @@
 
 答：潜水服。我们需要一种特殊的容器，它可以容纳事物，也可以生存在更换后的环境。姑且称它为虚拟环境或者适配器（有待商榷）。
 
-![](images\air_container.jpg)
+![](./images/air_container.jpg)
 
-我们假设大海是Layui框架，海绵宝宝和派大星是两个功能页面，珊迪是Vue功能页面，我们只要给珊迪开发一个潜水服。
+我们假设大海是Layui框架，海绵宝宝和派大星是两个Layui功能页面，陆地是Vue框架，珊迪是Vue功能页面，我们只要给珊迪开发一个潜水服，它就可以在海里生存，甚至是太空等其它地方。
 
 ## 如何解决我们的问题
 
 我们需要一个Vue功能页面容器（或者叫做适配器，珊迪的潜水服）
 
-![](images\container.png)
+![](./images/container.png)
 
 Vue页面容器的两个作用：
 
@@ -60,7 +60,7 @@ Vue页面容器的两个作用：
 
 简单说就是使得原Layui框架可以打开Vue页面
 
-![](images\final.png)
+![](./images/final.png)
 
 ### Vue功能页面容器的实现
 
@@ -78,7 +78,7 @@ Layui可以通过iframe访问页面，所以只要适配器可以通过浏览器
 
 # Vue框架的修改及裁剪
 
-![](images\edward.jpg)
+![](./images/edward.jpg)
 
 ## 修改：
 
@@ -112,7 +112,7 @@ Layui可以通过iframe访问页面，所以只要适配器可以通过浏览器
 
 一般情况下，我们可能会使用tomcat这两个项目，此时它们是同源的。
 
-![](images\request.png)
+![](./images/request.png)
 
 # 其它，待续……
 
